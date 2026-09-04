@@ -93,6 +93,7 @@
     .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
     .hero-note { font-size: 12px; opacity: .65; margin-top: 16px; }
     .sup-badge { display: inline-flex; align-items: center; gap: 12px; margin-top: 22px; padding: 10px 16px 10px 10px; border-radius: 999px; background: rgba(255,255,255,.08); border: 1px solid rgba(201,162,77,.45); font-size: 13px; }
+    .sup-badge img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); }
     .sup-badge .tag { background: var(--gold); color: var(--navy); font-weight: 900; font-size: 11px; letter-spacing: .12em; padding: 4px 10px; border-radius: 999px; }
     .sup-badge b { font-weight: 700; }
     .sup-badge small { opacity: .75; margin-left: 6px; }
@@ -100,7 +101,7 @@
     /* supervisor */
     .supervisor { display: grid; gap: 24px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; box-shadow: 0 2px 10px rgba(11,31,58,.04); }
     @media (min-width: 800px) { .supervisor { grid-template-columns: auto 1fr; padding: 40px; } }
-    .supervisor .avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, var(--navy), var(--navy-3)); display: grid; place-items: center; color: var(--gold-2); font-family: 'Noto Serif JP', serif; font-size: 34px; font-weight: 700; margin: 0 auto; border: 4px solid #fdf8ec; box-shadow: 0 8px 24px rgba(11,31,58,.15); }
+    .supervisor .photo { display: block; width: 168px; height: auto; border-radius: 16px; margin: 0 auto; border: 4px solid #fdf8ec; box-shadow: 0 10px 28px rgba(11,31,58,.18); object-fit: cover; }
     .supervisor .role { font-size: 12px; letter-spacing: .14em; color: var(--gold); font-weight: 700; }
     .supervisor .firm { font-size: 15px; color: var(--muted); margin: 6px 0 2px; }
     .supervisor .name { font-size: 28px; font-weight: 900; margin: 0 0 12px; line-height: 1.3; }
@@ -314,7 +315,7 @@
         <a class="btn btn-gold" href="#contact">無料で詳細資料を請求する</a>
         <a class="btn btn-outline" href="#sim">節税額を試算する</a>
       </div>
-      <div class="sup-badge"><span class="tag">監修</span><span><b>税理士法人OKS</b><small>代表社員 浅山直希</small></span></div>
+      <div class="sup-badge"><img src="img/asayama-sq.jpg" alt="浅山直希"><span class="tag">監修</span><span><b>税理士法人OKS</b><small>代表社員 浅山直希</small></span></div>
       <p class="hero-note">※ 効果は貴社の決算期・課税所得・消費税の申告方式により異なります。詳細は税理士等の専門家にご確認ください。</p>
     </div>
     <div class="stat-card">
@@ -552,7 +553,7 @@
       <p>税務上の取扱いに関する記載は、税理士法人による監修のもと作成しています。</p>
     </div>
     <div class="supervisor fade">
-      <div class="avatar">税</div>
+      <img class="photo" src="img/asayama.jpg" alt="税理士法人OKS 代表社員 浅山直希" width="276" height="318">
       <div>
         <div class="role">SUPERVISOR ／ 監修</div>
         <div class="firm">税理士法人OKS</div>
