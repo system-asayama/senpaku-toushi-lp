@@ -3,25 +3,674 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>senpaku-toushi-lp</title>
+  <title>船舶投資｜5,000万円を初年度に全額償却・消費税控除・リース料2年回収</title>
+  <meta name="description" content="中古船舶への5,000万円投資で、初年度に全額減価償却。消費税の仕入税額控除も適用可能。リース料は約2年で投資額を回収。今期の利益が確定している法人向けの船舶投資スキームをご案内します。">
+  <meta property="og:title" content="船舶投資｜5,000万円を初年度に全額償却">
+  <meta property="og:description" content="即時償却 × 消費税控除 × リース料2年回収。利益が確定している法人のための船舶投資スキーム。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-            sans-serif; margin: 0; min-height: 100vh;
-            display: grid; place-items: center;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: #fff; }
-    .card { background: rgba(255,255,255,.1); backdrop-filter: blur(10px);
-             padding: 3rem 4rem; border-radius: 16px; text-align: center;
-             box-shadow: 0 20px 60px rgba(0,0,0,.2); }
-    h1 { font-size: 3rem; margin: 0; }
-    p { margin: 1rem 0 0; opacity: .85; }
+    :root {
+      --navy: #0b1f3a;
+      --navy-2: #12305a;
+      --navy-3: #1d4478;
+      --gold: #c9a24d;
+      --gold-2: #e3c076;
+      --ink: #1b2431;
+      --muted: #5b6776;
+      --line: #e3e8ef;
+      --bg: #f6f8fb;
+      --white: #ffffff;
+      --red: #c0392b;
+      --green: #1f8a5b;
+      --radius: 14px;
+      --shadow: 0 12px 40px rgba(11, 31, 58, .12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; }
+    a { color: inherit; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+    .serif { font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif; }
+    .gold { color: var(--gold); }
+    .num { font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+
+    /* header */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(11, 31, 58, .92);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .04em; }
+    .brand .mark { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--gold-2)); display: grid; place-items: center; color: var(--navy); font-weight: 900; font-size: 14px; }
+    .nav ul { display: none; gap: 24px; list-style: none; margin: 0; padding: 0; font-size: 14px; }
+    .nav ul a { text-decoration: none; opacity: .85; }
+    .nav ul a:hover { opacity: 1; }
+    @media (min-width: 900px) { .nav ul { display: flex; } }
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 700; border-radius: 999px;
+      padding: 12px 26px; transition: transform .15s, box-shadow .15s, background .15s; cursor: pointer; border: 0; font-family: inherit; font-size: 15px;
+    }
+    .btn-gold { background: linear-gradient(135deg, var(--gold), var(--gold-2)); color: var(--navy); box-shadow: 0 8px 24px rgba(201,162,77,.35); }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(201,162,77,.45); }
+    .btn-outline { border: 1.5px solid rgba(255,255,255,.7); color: #fff; }
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+    .btn-sm { padding: 9px 18px; font-size: 13px; }
+
+    /* hero */
+    .hero {
+      position: relative; color: #fff; overflow: hidden;
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(201,162,77,.25), transparent 60%),
+        linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 55%, #0a2a4f 100%);
+      padding: 72px 0 0;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: auto 0 0 0; height: 160px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 160' preserveAspectRatio='none'%3E%3Cpath d='M0 90 C 240 40, 480 140, 720 90 S 1200 40, 1440 90 L1440 160 L0 160 Z' fill='rgba(255,255,255,0.05)'/%3E%3Cpath d='M0 120 C 240 70, 480 170, 720 120 S 1200 70, 1440 120 L1440 160 L0 160 Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E") no-repeat bottom/cover;
+      pointer-events: none;
+    }
+    .hero-grid { display: grid; gap: 40px; align-items: center; padding-bottom: 120px; position: relative; z-index: 1; }
+    @media (min-width: 960px) { .hero-grid { grid-template-columns: 1.15fr .85fr; } }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; letter-spacing: .18em; font-weight: 700; color: var(--gold-2); text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--gold-2); }
+    .hero h1 { font-size: clamp(30px, 4.6vw, 52px); line-height: 1.3; margin: 16px 0 12px; font-weight: 700; }
+    .hero h1 strong { color: var(--gold-2); font-weight: 900; }
+    .hero p.lead { font-size: 17px; opacity: .9; max-width: 560px; margin: 0 0 28px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+    .hero-note { font-size: 12px; opacity: .65; margin-top: 16px; }
+    .stat-card {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 20px; padding: 28px; backdrop-filter: blur(6px); box-shadow: 0 30px 60px rgba(0,0,0,.25);
+    }
+    .stat-card h3 { margin: 0 0 18px; font-size: 14px; letter-spacing: .1em; color: var(--gold-2); font-weight: 700; }
+    .stat-row { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.1); }
+    .stat-row:first-of-type { border-top: 0; }
+    .stat-row .k { font-size: 14px; opacity: .85; }
+    .stat-row .v { font-size: 26px; font-weight: 900; }
+    .stat-row .v small { font-size: 13px; font-weight: 500; opacity: .8; margin-left: 4px; }
+    .stat-card .total { margin-top: 12px; padding: 16px 18px; border-radius: 12px; background: linear-gradient(135deg, rgba(201,162,77,.25), rgba(201,162,77,.08)); border: 1px solid rgba(201,162,77,.5); }
+    .stat-card .total .k { font-size: 13px; }
+    .stat-card .total .v { font-size: 32px; color: var(--gold-2); white-space: nowrap; }
+    .stat-card .total { flex-wrap: wrap; gap: 4px 12px; }
+    .stat-card .total .k { flex: 1 1 140px; }
+
+    /* sections */
+    section { padding: 88px 0; }
+    .sec-head { text-align: center; margin-bottom: 52px; }
+    .sec-head .eyebrow { justify-content: center; }
+    .sec-head .eyebrow::before { display: none; }
+    .sec-head h2 { font-size: clamp(24px, 3.4vw, 36px); margin: 10px 0 12px; line-height: 1.35; }
+    .sec-head p { color: var(--muted); margin: 0 auto; max-width: 640px; }
+    .alt { background: var(--bg); }
+    .dark { background: var(--navy); color: #fff; }
+    .dark .sec-head p { color: rgba(255,255,255,.75); }
+
+    /* points */
+    .points { display: grid; gap: 22px; }
+    @media (min-width: 800px) { .points { grid-template-columns: repeat(3, 1fr); } }
+    .point {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 32px 26px;
+      box-shadow: 0 2px 10px rgba(11,31,58,.04); position: relative; overflow: hidden; transition: transform .2s, box-shadow .2s;
+    }
+    .point:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .point .no { position: absolute; top: 14px; right: 18px; font-size: 44px; font-weight: 900; color: rgba(11,31,58,.06); line-height: 1; }
+    .point .icon { width: 56px; height: 56px; border-radius: 14px; background: linear-gradient(135deg, var(--navy), var(--navy-3)); display: grid; place-items: center; margin-bottom: 18px; }
+    .point .icon svg { width: 28px; height: 28px; stroke: var(--gold-2); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .point h3 { margin: 0 0 8px; font-size: 20px; }
+    .point .big { font-size: 34px; font-weight: 900; color: var(--navy); line-height: 1.2; margin: 6px 0 10px; }
+    .point .big small { font-size: 14px; font-weight: 500; color: var(--muted); margin-left: 4px; }
+    .point p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+    /* scheme */
+    .scheme { display: grid; gap: 22px; }
+    @media (min-width: 900px) { .scheme { grid-template-columns: 1fr 1fr; align-items: center; } }
+    .flow { background: #fff; border-radius: var(--radius); border: 1px solid var(--line); padding: 28px; }
+    .flow-row { display: grid; grid-template-columns: 1fr; align-items: center; gap: 12px; }
+    @media (min-width: 600px) { .flow-row { grid-template-columns: 1fr auto 1fr; } }
+    .arrows { padding: 6px 0; }
+    .actor { text-align: center; padding: 18px 12px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); }
+    .actor .t { font-weight: 700; font-size: 15px; }
+    .actor .s { font-size: 12px; color: var(--muted); }
+    .actor.you { background: var(--navy); color: #fff; border-color: var(--navy); }
+    .actor.you .s { color: rgba(255,255,255,.7); }
+    .arrows { display: grid; gap: 8px; text-align: center; font-size: 12px; color: var(--muted); }
+    .arrow { position: relative; padding: 4px 8px; white-space: nowrap; }
+    .arrow.right::after, .arrow.left::before { content: ""; display: block; height: 2px; background: var(--gold); margin-top: 4px; position: relative; }
+    .arrow.right::after { background: linear-gradient(90deg, var(--gold), var(--gold)); }
+    .arrow .lbl { font-weight: 700; color: var(--navy); }
+    .flow .ship { margin: 18px auto 0; text-align: center; }
+    .flow .ship svg { width: 100%; max-width: 320px; height: auto; }
+    .checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+    .checks li { display: flex; gap: 12px; align-items: flex-start; }
+    .checks li .c { flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--gold); color: var(--navy); display: grid; place-items: center; font-weight: 900; font-size: 14px; margin-top: 3px; }
+    .checks li b { display: block; font-size: 16px; }
+    .checks li span { color: var(--muted); font-size: 14px; }
+
+    /* simulator */
+    .sim { display: grid; gap: 22px; }
+    @media (min-width: 960px) { .sim { grid-template-columns: .9fr 1.1fr; } }
+    .panel { background: #fff; border-radius: var(--radius); border: 1px solid var(--line); padding: 28px; }
+    .dark .panel { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.12); color: #fff; }
+    .field { margin-bottom: 20px; }
+    .field label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+    .field label output { color: var(--gold-2); font-size: 15px; }
+    .field input[type=range] { width: 100%; accent-color: var(--gold); }
+    .field .hint { font-size: 12px; opacity: .65; margin-top: 2px; }
+    .seg { display: flex; border: 1px solid rgba(255,255,255,.2); border-radius: 10px; overflow: hidden; }
+    .seg button { flex: 1; background: transparent; color: #fff; border: 0; padding: 10px; font-family: inherit; font-size: 13px; cursor: pointer; font-weight: 700; }
+    .seg button.on { background: var(--gold); color: var(--navy); }
+    .result { display: grid; gap: 12px; }
+    .r-row { display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 14px 16px; border-radius: 12px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); }
+    .r-row .k { font-size: 13.5px; }
+    .r-row .k small { display: block; opacity: .6; font-size: 11.5px; }
+    .r-row .v { font-size: 22px; font-weight: 900; }
+    .r-row.hl { background: linear-gradient(135deg, rgba(201,162,77,.28), rgba(201,162,77,.08)); border-color: rgba(201,162,77,.6); }
+    .r-row.hl .v { color: var(--gold-2); font-size: 28px; }
+    .bars { margin-top: 20px; }
+    .bar { display: grid; grid-template-columns: 110px 1fr; align-items: center; gap: 12px; margin: 10px 0; font-size: 13px; }
+    .bar .track { height: 22px; background: rgba(255,255,255,.08); border-radius: 6px; overflow: hidden; position: relative; }
+    .bar .fill { height: 100%; border-radius: 6px; transition: width .4s ease; }
+    .bar .fill.a { background: rgba(255,255,255,.35); }
+    .bar .fill.b { background: linear-gradient(90deg, var(--gold), var(--gold-2)); }
+    .bar .val { position: absolute; right: 8px; top: 0; line-height: 22px; font-size: 12px; font-weight: 700; }
+    .fine { font-size: 12px; opacity: .65; margin-top: 16px; line-height: 1.7; }
+
+    /* cash flow table */
+    .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--line); background: #fff; }
+    table { width: 100%; border-collapse: collapse; min-width: 640px; font-size: 14px; }
+    th, td { padding: 14px 16px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+    th:first-child, td:first-child { text-align: left; }
+    thead th { background: var(--navy); color: #fff; font-weight: 700; font-size: 13px; }
+    tbody tr:last-child td { border-bottom: 0; }
+    tbody tr.total td { background: #fdf8ec; font-weight: 900; color: var(--navy); }
+    td.neg { color: var(--red); }
+    td.pos { color: var(--green); }
+    .timeline { display: grid; gap: 14px; margin-top: 30px; }
+    @media (min-width: 800px) { .timeline { grid-template-columns: repeat(3, 1fr); } }
+    .tl { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; position: relative; }
+    .tl .y { font-size: 12px; letter-spacing: .12em; color: var(--gold); font-weight: 700; }
+    .tl h4 { margin: 4px 0 8px; font-size: 18px; }
+    .tl p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    /* target */
+    .targets { display: grid; gap: 16px; }
+    @media (min-width: 800px) { .targets { grid-template-columns: repeat(2, 1fr); } }
+    .target { display: flex; gap: 16px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+    .target .ic { flex: none; width: 46px; height: 46px; border-radius: 12px; background: #fdf8ec; display: grid; place-items: center; color: var(--gold); font-weight: 900; font-size: 20px; }
+    .target b { display: block; font-size: 16px; margin-bottom: 4px; }
+    .target span { color: var(--muted); font-size: 14px; }
+
+    /* steps */
+    .steps { display: grid; gap: 18px; counter-reset: step; }
+    @media (min-width: 900px) { .steps { grid-template-columns: repeat(5, 1fr); } }
+    .step { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 18px; text-align: center; }
+    .step .n { width: 40px; height: 40px; margin: 0 auto 12px; border-radius: 50%; background: var(--navy); color: var(--gold-2); display: grid; place-items: center; font-weight: 900; }
+    .step b { display: block; font-size: 15px; margin-bottom: 6px; }
+    .step span { font-size: 13px; color: var(--muted); }
+
+    /* faq */
+    .faq { max-width: 820px; margin: 0 auto; display: grid; gap: 12px; }
+    details { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 0 22px; }
+    summary { cursor: pointer; padding: 18px 0; font-weight: 700; font-size: 16px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; font-size: 22px; color: var(--gold); flex: none; }
+    details[open] summary::after { content: "−"; }
+    details p { margin: 0 0 18px; color: var(--muted); font-size: 14.5px; }
+
+    /* caution */
+    .caution { background: #fff; border-left: 4px solid var(--gold); border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 10px rgba(11,31,58,.05); }
+    .caution ul { margin: 8px 0 0; padding-left: 20px; color: var(--muted); font-size: 14px; }
+    .caution li { margin: 6px 0; }
+
+    /* contact */
+    .contact { display: grid; gap: 28px; }
+    @media (min-width: 960px) { .contact { grid-template-columns: 1fr 1fr; } }
+    .form { background: #fff; color: var(--ink); border-radius: var(--radius); padding: 30px; }
+    .form .row { display: grid; gap: 14px; }
+    @media (min-width: 600px) { .form .row.two { grid-template-columns: 1fr 1fr; } }
+    .form label { font-size: 13px; font-weight: 700; display: block; margin-bottom: 4px; }
+    .form label em { font-style: normal; color: var(--red); font-size: 11px; margin-left: 4px; }
+    .form input, .form select, .form textarea {
+      width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 11px 12px; font-family: inherit; font-size: 15px; background: #fbfcfd;
+    }
+    .form input:focus, .form select:focus, .form textarea:focus { outline: 2px solid var(--gold); border-color: var(--gold); }
+    .form .fld { margin-bottom: 14px; }
+    .form .submit { margin-top: 8px; width: 100%; }
+    .form .ok { display: none; background: #eefaf3; border: 1px solid #b9e3c9; color: var(--green); padding: 14px; border-radius: 10px; margin-top: 14px; font-size: 14px; }
+    .contact-info h3 { font-size: 26px; margin: 0 0 12px; }
+    .contact-info p { opacity: .85; }
+    .contact-info .line { display: flex; gap: 12px; align-items: flex-start; margin: 14px 0; font-size: 14.5px; }
+    .contact-info .line b { color: var(--gold-2); flex: none; }
+
+    /* footer */
+    footer { background: #071426; color: rgba(255,255,255,.7); font-size: 12.5px; padding: 40px 0; }
+    footer .disc { border-top: 1px solid rgba(255,255,255,.1); margin-top: 20px; padding-top: 20px; line-height: 1.8; }
+
+    /* sticky mobile CTA */
+    .mcta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 10px 14px; background: rgba(11,31,58,.95); backdrop-filter: blur(6px); display: flex; gap: 10px; }
+    .mcta .btn { flex: 1; text-align: center; padding: 12px; font-size: 14px; }
+    @media (min-width: 900px) { .mcta { display: none; } }
+    body { padding-bottom: 70px; }
+    @media (min-width: 900px) { body { padding-bottom: 0; } }
+
+    .fade { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .fade.in { opacity: 1; transform: none; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🚀 senpaku-toushi-lp</h1>
-    <p>Docker + nginx でデプロイ完了</p>
+
+<header>
+  <div class="container nav">
+    <div class="brand"><span class="mark">S</span>船舶投資スキーム</div>
+    <ul>
+      <li><a href="#points">3つの特長</a></li>
+      <li><a href="#scheme">仕組み</a></li>
+      <li><a href="#sim">シミュレーション</a></li>
+      <li><a href="#cashflow">回収モデル</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+    </ul>
+    <a class="btn btn-gold btn-sm" href="#contact">無料相談する</a>
   </div>
-  <script async src="https://ai-app-studio.benefit-navi.com/static/log_analysis_track.js"></script>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:72px">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Ship Investment Scheme</span>
+      <h1>5,000万円の船舶投資を、<br><strong>今年の経費</strong>に。</h1>
+      <p class="lead">中古船舶を取得しリース運用することで、<b>投資額を初年度に全額減価償却</b>。さらに<b>消費税の仕入税額控除</b>も適用でき、投資額は<b>約2年分のリース料で回収</b>する設計です。今期の利益が確定している法人様にご提案しています。</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#contact">無料で詳細資料を請求する</a>
+        <a class="btn btn-outline" href="#sim">節税額を試算する</a>
+      </div>
+      <p class="hero-note">※ 効果は貴社の決算期・課税所得・消費税の申告方式により異なります。詳細は税理士等の専門家にご確認ください。</p>
+    </div>
+    <div class="stat-card">
+      <h3>モデルケース（投資額 5,000万円・税抜）</h3>
+      <div class="stat-row"><span class="k">初年度の減価償却費</span><span class="v num">5,000<small>万円</small></span></div>
+      <div class="stat-row"><span class="k">法人税等の軽減額<br><small style="opacity:.7">実効税率 33% で試算</small></span><span class="v num">約1,650<small>万円</small></span></div>
+      <div class="stat-row"><span class="k">消費税の仕入税額控除<br><small style="opacity:.7">取得価額 × 10%</small></span><span class="v num">500<small>万円</small></span></div>
+      <div class="total stat-row"><span class="k">初年度の税務キャッシュ効果</span><span class="v num">約2,150<small>万円</small></span></div>
+      <div class="stat-row" style="border-top:1px solid rgba(255,255,255,.1);margin-top:8px"><span class="k">リース料による投資回収</span><span class="v num">約2<small>年</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- POINTS -->
+<section id="points">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow">3 Key Benefits</span>
+      <h2>船舶投資が選ばれる3つの理由</h2>
+      <p>「償却」「消費税」「回収」の3点が同時に成立するのが、このスキームの最大の特長です。</p>
+    </div>
+    <div class="points">
+      <div class="point fade">
+        <span class="no">01</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 17l4-8 4 5 3-3 7 6"/><path d="M3 21h18"/></svg></div>
+        <h3>初年度に全額減価償却</h3>
+        <div class="big num">5,000<small>万円を一括計上</small></div>
+        <p>法定耐用年数を経過した中古船舶は、簡便法により耐用年数が<b>2年</b>となり、定率法の償却率は<b>1.000</b>。期首に取得すれば、取得価額の全額を初年度の損金に算入できます。</p>
+      </div>
+      <div class="point fade">
+        <span class="no">02</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg></div>
+        <h3>消費税の税額控除</h3>
+        <div class="big num">500<small>万円を控除・還付</small></div>
+        <p>船舶の取得は課税仕入れに該当。本則課税の課税事業者であれば、取得にかかった消費税を<b>仕入税額控除</b>として控除でき、控除しきれない場合は還付を受けられます。</p>
+      </div>
+      <div class="point fade">
+        <span class="no">03</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>リース料で2年回収</h3>
+        <div class="big num">約2<small>年で投資額を回収</small></div>
+        <p>取得した船舶は運航会社へリース。<b>年間約2,500万円</b>のリース料収入を見込み、約2年で投資元本相当額を回収。その後も船舶は資産として残り、売却も可能です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEME -->
+<section id="scheme" class="alt">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow">How it works</span>
+      <h2>スキームの仕組み</h2>
+      <p>貴社が船舶を取得し、運航会社にリースする。構造はシンプルです。</p>
+    </div>
+    <div class="scheme">
+      <div class="flow fade">
+        <div class="flow-row">
+          <div class="actor you"><div class="t">貴社（投資家）</div><div class="s">船舶を取得・所有</div></div>
+          <div class="arrows">
+            <div class="arrow right"><span class="lbl">船舶をリース</span></div>
+            <div class="arrow left"><span class="lbl">リース料（年約2,500万円）</span></div>
+          </div>
+          <div class="actor"><div class="t">運航会社</div><div class="s">船舶を運航・収益化</div></div>
+        </div>
+        <div class="ship">
+          <svg viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="hull" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1d4478"/><stop offset="1" stop-color="#0b1f3a"/></linearGradient></defs>
+            <path d="M20 70 L300 70 L275 100 L45 100 Z" fill="url(#hull)"/>
+            <rect x="180" y="40" width="70" height="30" rx="3" fill="#c9a24d"/>
+            <rect x="200" y="22" width="30" height="18" rx="2" fill="#e3c076"/>
+            <rect x="60" y="52" width="100" height="18" rx="2" fill="#1d4478"/>
+            <rect x="70" y="56" width="20" height="10" fill="#e3c076" opacity=".8"/><rect x="95" y="56" width="20" height="10" fill="#e3c076" opacity=".8"/><rect x="120" y="56" width="20" height="10" fill="#e3c076" opacity=".8"/>
+            <rect x="210" y="8" width="4" height="14" fill="#0b1f3a"/>
+            <path d="M0 104 Q 20 96 40 104 T 80 104 T 120 104 T 160 104 T 200 104 T 240 104 T 280 104 T 320 104 V120 H0 Z" fill="#dbe6f3"/>
+          </svg>
+        </div>
+        <div style="margin-top:14px;text-align:center;font-size:12.5px;color:var(--muted)">取得価額 5,000万円（税抜）／ 消費税 500万円 ／ 総支払額 5,500万円</div>
+      </div>
+      <ul class="checks fade">
+        <li><span class="c">1</span><div><b>貴社名義で中古船舶を取得</b><span>取得価額5,000万円（税抜）。法定耐用年数を経過した中古船舶を選定し、簡便法で耐用年数2年を適用します。</span></div></li>
+        <li><span class="c">2</span><div><b>取得年度に全額を減価償却</b><span>耐用年数2年の定率法償却率は1.000。期首取得で、初年度に取得価額全額を損金算入できます。</span></div></li>
+        <li><span class="c">3</span><div><b>消費税500万円を仕入税額控除</b><span>本則課税の課税事業者であれば、船舶取得時に支払った消費税を控除。納付額が減り、控除しきれなければ還付されます。</span></div></li>
+        <li><span class="c">4</span><div><b>運航会社にリースし、リース料を受領</b><span>年間約2,500万円のリース料収入を想定。約2年で投資額相当を回収します。</span></div></li>
+        <li><span class="c">5</span><div><b>リース期間満了後は売却 or 継続保有</b><span>簿価1円の船舶が資産として残るため、売却益（課税対象）の獲得や、継続リースによる収入も見込めます。</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SIMULATOR -->
+<section id="sim" class="dark">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow" style="color:var(--gold-2)">Simulation</span>
+      <h2>節税効果シミュレーション</h2>
+      <p>貴社の課税所得と実効税率を入力すると、初年度の税務キャッシュ効果を概算します。</p>
+    </div>
+    <div class="sim">
+      <div class="panel fade">
+        <div class="field">
+          <label>投資額（船舶取得価額・税抜）<output id="oInvest">5,000万円</output></label>
+          <input type="range" id="invest" min="3000" max="20000" step="500" value="5000">
+          <div class="hint">3,000万円〜2億円の範囲で設定できます。</div>
+        </div>
+        <div class="field">
+          <label>今期の見込み課税所得（投資前）<output id="oIncome">8,000万円</output></label>
+          <input type="range" id="income" min="1000" max="30000" step="500" value="8000">
+          <div class="hint">償却費は課税所得の範囲内で効果を発揮します（赤字分は繰越欠損金）。</div>
+        </div>
+        <div class="field">
+          <label>法人実効税率<output id="oRate">33%</output></label>
+          <input type="range" id="rate" min="20" max="40" step="1" value="33">
+          <div class="hint">中小法人は所得800万円超部分で概ね33〜34%が目安です。</div>
+        </div>
+        <div class="field">
+          <label>消費税の申告方式</label>
+          <div class="seg">
+            <button type="button" class="on" data-vat="1">本則課税（控除あり）</button>
+            <button type="button" data-vat="0">簡易課税・免税（控除なし）</button>
+          </div>
+          <div class="hint">仕入税額控除は本則課税の課税事業者のみ適用できます。</div>
+        </div>
+      </div>
+      <div class="panel fade">
+        <div class="result">
+          <div class="r-row"><div class="k">初年度の減価償却費<small>取得価額の全額（期首取得・耐用年数2年）</small></div><div class="v num" id="rDep">—</div></div>
+          <div class="r-row"><div class="k">法人税等の軽減額<small>償却費（課税所得が上限）× 実効税率</small></div><div class="v num" id="rTax">—</div></div>
+          <div class="r-row"><div class="k">消費税の仕入税額控除<small>取得価額 × 10%</small></div><div class="v num" id="rVat">—</div></div>
+          <div class="r-row hl"><div class="k"><b>初年度の税務キャッシュ効果 合計</b><small>法人税等の軽減 ＋ 消費税控除</small></div><div class="v num" id="rTotal">—</div></div>
+          <div class="r-row"><div class="k">年間リース料収入（想定）<small>投資額 ÷ 2年</small></div><div class="v num" id="rLease">—</div></div>
+        </div>
+        <div class="bars">
+          <div class="bar"><span>投資なし</span><div class="track"><div class="fill a" id="bA"></div><span class="val" id="vA"></span></div></div>
+          <div class="bar"><span>船舶投資あり</span><div class="track"><div class="fill b" id="bB"></div><span class="val" id="vB"></span></div></div>
+          <div style="font-size:12px;opacity:.7;margin-top:6px">▲ 今期の法人税等 納税額の比較</div>
+        </div>
+        <p class="fine">※ 本シミュレーションは概算であり、地方税・事業税の損金算入、繰越欠損金、消費税の中間納付等は考慮していません。即時償却は課税の繰延べであり、翌期以降のリース料収入は課税所得となります。実際の効果は必ず税理士等にご確認ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASHFLOW -->
+<section id="cashflow">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow">Cash Flow Model</span>
+      <h2>投資回収モデル（3年間）</h2>
+      <p>モデルケース：投資額5,000万円（税抜）、実効税率33%、リース料 年2,500万円で試算。</p>
+    </div>
+    <div class="table-wrap fade">
+      <table>
+        <thead>
+          <tr><th>項目</th><th>1年目（取得年度）</th><th>2年目</th><th>3年目</th><th>累計</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>船舶取得（税込支払）</td><td class="neg num">▲5,500万円</td><td>—</td><td>—</td><td class="neg num">▲5,500万円</td></tr>
+          <tr><td>消費税の仕入税額控除・還付</td><td class="pos num">＋500万円</td><td>—</td><td>—</td><td class="pos num">＋500万円</td></tr>
+          <tr><td>法人税等の軽減（償却5,000万円 × 33%）</td><td class="pos num">＋1,650万円</td><td>—</td><td>—</td><td class="pos num">＋1,650万円</td></tr>
+          <tr><td>リース料収入</td><td class="pos num">＋2,500万円</td><td class="pos num">＋2,500万円</td><td class="pos num">＋2,500万円</td><td class="pos num">＋7,500万円</td></tr>
+          <tr><td>リース料収入にかかる法人税等（33%）</td><td class="neg num">▲825万円</td><td class="neg num">▲825万円</td><td class="neg num">▲825万円</td><td class="neg num">▲2,475万円</td></tr>
+          <tr class="total"><td>年間キャッシュフロー</td><td class="num">▲1,675万円</td><td class="num">＋1,675万円</td><td class="num">＋1,675万円</td><td class="num">＋1,675万円</td></tr>
+          <tr><td>累計キャッシュフロー</td><td class="neg num">▲1,675万円</td><td class="num">±0万円</td><td class="pos num">＋1,675万円</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="timeline">
+      <div class="tl fade"><span class="y">YEAR 1</span><h4>取得・即時償却</h4><p>期首に船舶を取得し全額償却。法人税等の軽減と消費税控除で、初年度の実質負担を大幅に圧縮します。</p></div>
+      <div class="tl fade"><span class="y">YEAR 2</span><h4>リース料で回収完了</h4><p>2年目のリース料収入で税引後の累計キャッシュフローが概ねゼロに。投資元本相当額の回収が完了します。</p></div>
+      <div class="tl fade"><span class="y">YEAR 3〜</span><h4>収益フェーズ / 売却</h4><p>3年目以降は純粋な収益フェーズ。簿価1円の船舶を売却すればまとまった売却益（課税対象）も見込めます。</p></div>
+    </div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:16px">※ 上記は単純化したモデルです。リース料の水準・期間、売却価格は船舶や市況により変動し、保証されるものではありません。</p>
+  </div>
+</section>
+
+<!-- TARGET -->
+<section class="alt">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow">Who it's for</span>
+      <h2>こんな法人様に最適です</h2>
+      <p>利益が出ることが確定している法人ほど、このスキームの効果は大きくなります。</p>
+    </div>
+    <div class="targets">
+      <div class="target fade"><div class="ic">✓</div><div><b>今期の利益が確定している</b><span>決算前に大きな損金を計上し、納税額を圧縮したい法人様。課税所得が5,000万円以上あると効果が最大化します。</span></div></div>
+      <div class="target fade"><div class="ic">✓</div><div><b>消費税の本則課税事業者</b><span>仕入税額控除を活用できるため、船舶取得にかかる消費税500万円の控除・還付を受けられます。</span></div></div>
+      <div class="target fade"><div class="ic">✓</div><div><b>手元資金に余裕がある</b><span>投資額5,500万円（税込）を一括で用意でき、2年程度の回収期間を許容できる法人様。</span></div></div>
+      <div class="target fade"><div class="ic">✓</div><div><b>節税だけでなく資産も残したい</b><span>保険や単純な費用計上と異なり、償却後も船舶という実物資産が残り、売却益や継続収入が見込めます。</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section>
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow">Process</span>
+      <h2>ご相談から運用開始までの流れ</h2>
+      <p>決算期に合わせて最適なタイミングで取得できるよう、スケジュールを設計します。</p>
+    </div>
+    <div class="steps">
+      <div class="step fade"><div class="n">1</div><b>無料相談</b><span>決算期・利益見込み・消費税の申告方式をヒアリング</span></div>
+      <div class="step fade"><div class="n">2</div><b>個別シミュレーション</b><span>貴社数値で節税額と回収モデルを試算</span></div>
+      <div class="step fade"><div class="n">3</div><b>船舶・運航会社の選定</b><span>対象船舶とリース先をご提案</span></div>
+      <div class="step fade"><div class="n">4</div><b>契約・取得</b><span>売買契約・リース契約を締結し、期首に取得</span></div>
+      <div class="step fade"><div class="n">5</div><b>運用・決算</b><span>リース料受領。決算では顧問税理士様と連携</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAUTION -->
+<section class="alt" style="padding-top:0">
+  <div class="container">
+    <div class="caution fade">
+      <b>ご検討にあたっての留意点</b>
+      <ul>
+        <li><b>課税の繰延べです。</b>即時償却は税金を将来に繰り延べる効果であり、翌期以降のリース料収入や売却益は課税所得となります。</li>
+        <li><b>期首取得が前提です。</b>減価償却費は事業供用日からの月割り計算のため、期中取得の場合、初年度の償却額は減少します。</li>
+        <li><b>中古船舶の耐用年数は個別判定が必要です。</b>簡便法（法定耐用年数の全部を経過：法定耐用年数×20%、最短2年）の適用可否を専門家にご確認ください。</li>
+        <li><b>消費税の控除は本則課税の課税事業者に限られます。</b>免税事業者・簡易課税選択事業者は仕入税額控除を受けられません。</li>
+        <li><b>元本・リース料は保証されません。</b>運航会社の信用リスク、海運市況、船舶の事故・滅失等により、リース料や売却価格が想定を下回る可能性があります。</li>
+        <li><b>税務上の取扱いは改正等により変更される場合があります。</b>最終判断は必ず顧問税理士等の専門家にご相談ください。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow">FAQ</span>
+      <h2>よくあるご質問</h2>
+    </div>
+    <div class="faq">
+      <details class="fade"><summary>なぜ初年度に全額償却できるのですか？</summary><p>法定耐用年数を全て経過した中古資産は、簡便法により「法定耐用年数×20%（最短2年）」で耐用年数を見積もることができます。耐用年数2年の定率法償却率は1.000のため、期首に取得・事業供用すれば取得価額全額（備忘価額1円を除く）を初年度に償却できます。</p></details>
+      <details class="fade"><summary>消費税の控除・還付はどのように受けられますか？</summary><p>船舶の購入は課税仕入れに該当するため、本則課税の課税事業者であれば取得時に支払った消費税（5,000万円の場合500万円）を仕入税額控除として控除できます。当期の課税売上に係る消費税から控除しきれない場合は、申告により還付を受けられます。</p></details>
+      <details class="fade"><summary>リース料は本当に2年で回収できますか？</summary><p>モデルケースでは年間約2,500万円（投資額の50%）のリース料を想定しており、2年で投資元本相当額を回収する設計です。ただしリース料は運航会社との契約条件および市況により変動し、保証されるものではありません。個別案件ごとにリース契約条件をご確認いただけます。</p></details>
+      <details class="fade"><summary>決算月の直前でも間に合いますか？</summary><p>償却費は事業供用日からの月割り計算のため、初年度に全額償却するには期首（決算月の翌月）の取得が最も効果的です。決算直前の場合は、翌期首に取得するスケジュールをご提案します。まずは決算期をお知らせください。</p></details>
+      <details class="fade"><summary>個人事業主でも利用できますか？</summary><p>個人の場合は不動産所得・事業所得等の区分や損益通算の制限があり、法人と同じ効果が得られないことがあります。原則として法人様向けのスキームですが、個別にご相談ください。</p></details>
+      <details class="fade"><summary>船舶の管理や運航に関与する必要はありますか？</summary><p>運航・保守・保険等は運航会社（リース先）が担うため、貴社が船舶の運航実務に関与する必要はありません。貴社は所有者としてリース料を受け取る立場となります。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="dark">
+  <div class="container contact">
+    <div class="contact-info fade">
+      <span class="eyebrow" style="color:var(--gold-2)">Contact</span>
+      <h3>まずは無料相談・<br>個別シミュレーションから</h3>
+      <p>貴社の決算期・利益見込み・消費税の申告方式をもとに、節税額と回収モデルを個別に試算します。顧問税理士様の同席も歓迎です。</p>
+      <div class="line"><b>対象</b><span>今期の利益が確定している法人様（課税所得 概ね3,000万円以上）</span></div>
+      <div class="line"><b>費用</b><span>相談・シミュレーションは無料</span></div>
+      <div class="line"><b>期限</b><span>決算期の3か月前までのご相談を推奨</span></div>
+    </div>
+    <form class="form fade" id="contactForm" novalidate>
+      <div class="row two">
+        <div class="fld"><label>会社名<em>必須</em></label><input type="text" name="company" required placeholder="株式会社〇〇"></div>
+        <div class="fld"><label>お名前<em>必須</em></label><input type="text" name="name" required placeholder="山田 太郎"></div>
+      </div>
+      <div class="row two">
+        <div class="fld"><label>メールアドレス<em>必須</em></label><input type="email" name="email" required placeholder="info@example.com"></div>
+        <div class="fld"><label>電話番号</label><input type="tel" name="tel" placeholder="03-1234-5678"></div>
+      </div>
+      <div class="row two">
+        <div class="fld"><label>決算月</label>
+          <select name="fy"><option value="">選択してください</option><option>1月</option><option>2月</option><option>3月</option><option>4月</option><option>5月</option><option>6月</option><option>7月</option><option>8月</option><option>9月</option><option>10月</option><option>11月</option><option>12月</option></select>
+        </div>
+        <div class="fld"><label>今期の見込み課税所得</label>
+          <select name="income"><option value="">選択してください</option><option>〜3,000万円</option><option>3,000万〜5,000万円</option><option>5,000万〜1億円</option><option>1億〜3億円</option><option>3億円以上</option></select>
+        </div>
+      </div>
+      <div class="fld"><label>ご相談内容</label><textarea name="msg" rows="3" placeholder="ご質問やご希望の投資額などをご記入ください"></textarea></div>
+      <button type="submit" class="btn btn-gold submit">無料相談を申し込む</button>
+      <div class="ok" id="formOk">送信内容をメールソフトで開きました。送信を完了してください。担当者より1営業日以内にご連絡いたします。</div>
+      <p style="font-size:11.5px;color:var(--muted);margin:12px 0 0">送信いただいた情報は、本件のご連絡以外の目的には使用しません。</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="brand" style="color:#fff"><span class="mark">S</span>船舶投資スキーム</div>
+    <div class="disc">
+      本ページは中古船舶投資に関する一般的な情報提供を目的としており、特定の金融商品の勧誘や税務・法務上の助言を行うものではありません。記載の税務効果は2026年時点の税制に基づく一例であり、貴社の状況や税制改正により結果が異なる場合があります。投資判断は、顧問税理士・弁護士等の専門家にご相談のうえ、ご自身の責任において行ってください。船舶投資には運航会社の信用リスク、市況変動リスク、船舶の滅失・損傷リスク等が伴い、元本およびリース料収入は保証されません。
+      <br><br>© 2026 船舶投資スキーム. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<div class="mcta">
+  <a class="btn btn-outline" href="#sim">試算する</a>
+  <a class="btn btn-gold" href="#contact">無料相談</a>
+</div>
+
+<script>
+  // ---- simulator ----
+  (function () {
+    const $ = (id) => document.getElementById(id);
+    const invest = $('invest'), income = $('income'), rate = $('rate');
+    let vat = 1;
+    const man = (n) => Math.round(n).toLocaleString('ja-JP') + '万円';
+    const fmtBig = (n) => n >= 10000 ? (n / 10000).toFixed(n % 10000 === 0 ? 0 : 1) + '億円' : n.toLocaleString('ja-JP') + '万円';
+
+    function calc() {
+      const I = +invest.value, Y = +income.value, r = +rate.value / 100;
+      $('oInvest').textContent = fmtBig(I);
+      $('oIncome').textContent = fmtBig(Y);
+      $('oRate').textContent = rate.value + '%';
+
+      const dep = I;
+      const effective = Math.min(dep, Y);
+      const taxSave = effective * r;
+      const vatSave = vat ? I * 0.10 : 0;
+      const total = taxSave + vatSave;
+      const lease = I / 2;
+
+      $('rDep').textContent = man(dep);
+      $('rTax').textContent = '約' + man(taxSave);
+      $('rVat').textContent = vat ? man(vatSave) : '0万円（適用外）';
+      $('rTotal').textContent = '約' + man(total);
+      $('rLease').textContent = '約' + man(lease);
+
+      const before = Y * r, after = Math.max(Y - dep, 0) * r;
+      const max = Math.max(before, 1);
+      $('bA').style.width = '100%';
+      $('bB').style.width = (after / max * 100) + '%';
+      $('vA').textContent = '約' + man(before);
+      $('vB').textContent = '約' + man(after);
+    }
+    [invest, income, rate].forEach(el => el.addEventListener('input', calc));
+    document.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => {
+      document.querySelectorAll('.seg button').forEach(x => x.classList.remove('on'));
+      b.classList.add('on'); vat = +b.dataset.vat; calc();
+    }));
+    calc();
+  })();
+
+  // ---- contact form (mailto) ----
+  (function () {
+    const form = document.getElementById('contactForm');
+    const TO = 'info@example.com'; // TODO: 送信先メールアドレスを設定してください
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const d = new FormData(form);
+      const body = [
+        '【船舶投資 無料相談のお申し込み】', '',
+        '会社名: ' + d.get('company'),
+        'お名前: ' + d.get('name'),
+        'メール: ' + d.get('email'),
+        '電話: ' + (d.get('tel') || '-'),
+        '決算月: ' + (d.get('fy') || '-'),
+        '見込み課税所得: ' + (d.get('income') || '-'),
+        '', 'ご相談内容:', d.get('msg') || '-'
+      ].join('\n');
+      window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent('船舶投資 無料相談のお申し込み（' + d.get('company') + '）') + '&body=' + encodeURIComponent(body);
+      document.getElementById('formOk').style.display = 'block';
+    });
+  })();
+
+  // ---- scroll reveal ----
+  (function () {
+    const els = document.querySelectorAll('.fade');
+    if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: .12 });
+    els.forEach(e => io.observe(e));
+  })();
+</script>
+<script async src="https://ai-app-studio.benefit-navi.com/static/log_analysis_track.js"></script>
 </body>
 </html>
